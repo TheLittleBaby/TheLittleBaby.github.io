@@ -1,0 +1,68 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta name="generator" content="Hexo 3.9.0"><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><title>学习笔记——Java对象(提纲) | TheLittleBaby</title><meta name="description" content="学习笔记——Java对象(提纲)"><meta name="keywords" content="Java,对象"><meta name="author" content="TheLittleBaby"><meta name="copyright" content="TheLittleBaby"><meta name="format-detection" content="telephone=no"><link rel="shortcut icon" href="/img/favicon.ico"><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@latest/css/font-awesome.min.css"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css"><meta http-equiv="x-dns-prefetch-control" content="on"><link rel="canonical" href="http://wangxiuwei.xyz/2019/08/08/对象提纲/"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="学习笔记——Java对象(提纲)"><meta name="twitter:description" content="学习笔记——Java对象(提纲)"><meta name="twitter:image" content="http://wangxiuwei.xyz/img/post-cover/2.png"><meta property="og:type" content="article"><meta property="og:title" content="学习笔记——Java对象(提纲)"><meta property="og:url" content="http://wangxiuwei.xyz/2019/08/08/对象提纲/"><meta property="og:site_name" content="TheLittleBaby"><meta property="og:description" content="学习笔记——Java对象(提纲)"><meta property="og:image" content="http://wangxiuwei.xyz/img/post-cover/2.png"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><link rel="prev" title="学习笔记——List容器与Set容器" href="http://wangxiuwei.xyz/2019/08/09/List容器与Set容器/"><link rel="next" title="学习笔记——Java对象" href="http://wangxiuwei.xyz/2019/08/08/对象/"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Titillium+Web"><script>var GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: {"defaultEncoding":2,"translateDelay":0,"cookieDomain":"https://wangxiuwei.xyz/","msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"简"},
+  highlight_copy: 'true',
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  bookmark: {
+    title: '添加书签',
+    message_prev: '按',
+    message_next: '键将本页加入书签'
+  },
+  runtime_unit: '天'
+
+  
+}</script></head><body><canvas class="fireworks"></canvas><i class="fa fa-arrow-right" id="toggle-sidebar" aria-hidden="true"></i><div class="auto_open" id="sidebar"><div class="sidebar-toc"><div class="sidebar-toc__title">目录</div><div class="sidebar-toc__progress"><span class="progress-notice">你已经读了</span><span class="progress-num">0</span><span class="progress-percentage">%</span><div class="sidebar-toc__progress-bar"></div></div><div class="sidebar-toc__content"><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#包裹类型"><span class="toc-number">1.</span> <span class="toc-text">包裹类型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#字符串变量"><span class="toc-number">2.</span> <span class="toc-text">字符串变量</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#字符串操作"><span class="toc-number">3.</span> <span class="toc-text">字符串操作</span></a></li></ol></div></div></div><div id="content-outer"><div id="top-container" style="background-image: url(/img/post-cover/2.png)"><div id="page-header"><span class="pull-left"> <a class="blog_title" id="site-name" href="/">TheLittleBaby</a></span><div class="open toggle-menu pull-right"><div class="menu-icon-first"></div><div class="menu-icon-second"></div><div class="menu-icon-third"></div></div><span class="pull-right menus"><div class="mobile_author_icon"><img class="lozad" src="/img/avatar.png" onerror="onerror=null;src='/img/friend_404.gif'"><div class="mobile_author-info__description">今日事,今日毕</div></div><hr><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fa fa-home"></i><span> 首页</span></a><a class="site-page" href="/archives/"><i class="fa-fw fa fa-archive"></i><span> 时间轴</span></a><a class="site-page" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> 标签</span></a><a class="site-page" href="/categories/"><i class="fa-fw fa fa-folder-open"></i><span> 分类</span></a><a class="site-page" href="/link/"><i class="fa-fw fa fa-link"></i><span> 友链</span></a><a class="site-page" href="/about/"><i class="fa-fw fa fa-heart"></i><span> 关于我</span></a><script>document.body.addEventListener('touchstart', function(){ });</script></div></span><span class="pull-right"></span></div><div id="post-info"><div id="post-title"><div class="posttitle">学习笔记——Java对象(提纲)</div></div><div id="post-meta"><time class="post-meta__date"><i class="fa fa-calendar" aria-hidden="true"></i> 发表于 2019-08-08<span class="post-meta__separator">|</span><i class="fa fa-history" aria-hidden="true"></i> 更新于 2019-08-09</time><span class="post-meta__separator mobile_hidden">|</span><span class="mobile_hidden"><i class="fa fa-inbox post-meta__icon" aria-hidden="true"></i><a class="post-meta__categories" href="/categories/Java/">Java</a></span><div class="post-meta-wordcount"><span>字数总计: </span><span class="word-count">243</span><span class="post-meta__separator">|</span><span>阅读时长: 1 分钟</span><span class="post-meta__separator">|</span><span>阅读量: </span><span id="busuanzi_value_page_pv"></span></div></div></div></div><div class="layout layout_post" id="content-inner">   <article id="post"><div class="article-container" id="post-content"><h3 id="包裹类型"><a href="#包裹类型" class="headerlink" title="包裹类型"></a>包裹类型</h3><ol>
+<li>含有包裹类型的数据类型：<ul>
+<li>boolean</li>
+<li>char</li>
+<li>int</li>
+<li>double</li>
+</ul>
+</li>
+<li>包裹类型内有一些封装好的属性</li>
+</ol>
+<h3 id="字符串变量"><a href="#字符串变量" class="headerlink" title="字符串变量"></a>字符串变量</h3><blockquote>
+<p> 双引号、类，“管理者”（类比数组）</p>
+</blockquote>
+<ol>
+<li>定义字符串的两种方法（不需要分那么细，比如初始化或者创建，因为一般对于遍历，创建的时候可以直接赋予初始值，也可以不赋予，后面给值）</li>
+<li>字符串连接（涉及到类型转换）</li>
+<li>输入字符串的两种方法</li>
+<li><code>==</code>与<code>.equals</code></li>
+</ol>
+<h3 id="字符串操作"><a href="#字符串操作" class="headerlink" title="字符串操作"></a>字符串操作</h3><blockquote>
+<p>.圆点运算符</p>
+</blockquote>
+<ol>
+<li><p>String的大小</p>
+</li>
+<li><p>String的长度</p>
+</li>
+<li><p>访问字符串内的字符</p>
+</li>
+<li><p>剪取字段</p>
+</li>
+<li><p>寻找字符，顺序，倒序（大概知道有哪几个函数就行，不用记的特别清楚，因为很多是字面意思，你输入圆点的时候编辑器会告诉你有哪些函数）</p>
+</li>
+<li><blockquote>
+<p>s.startsWith()</p>
+<p>s.endWith()</p>
+<p>s.trim()</p>
+<p>s.replace(c1,c2)</p>
+<p>s.toLowerCase()</p>
+<p>s.toUpperCase()</p>
+</blockquote>
+</li>
+<li><p>switch-case中可以使用字符串</p>
+</li>
+</ol>
+</div></article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:undefined">TheLittleBaby</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="http://wangxiuwei.xyz/2019/08/08/对象提纲/">http://wangxiuwei.xyz/2019/08/08/对象提纲/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="http://wangxiuwei.xyz">TheLittleBaby</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/Java/">Java    </a><a class="post-meta__tags" href="/tags/对象/">对象    </a></div><div class="post_share"><div class="social-share" data-image="/img/post-cover/2.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js@1.0.16/dist/css/share.min.css"><script src="https://cdn.jsdelivr.net/npm/social-share.js@1.0.16/dist/js/social-share.min.js"></script></div></div><nav class="pagination_post" id="pagination"><div class="prev-post pull-left"><a href="/2019/08/09/List容器与Set容器/"><img class="prev_cover lozad" data-src="/img/post-cover/4.png" onerror="onerror=null;src='/img/404.jpg'"><div class="label">上一篇</div><div class="prev_info"><span>学习笔记——List容器与Set容器</span></div></a></div><div class="next-post pull-right"><a href="/2019/08/08/对象/"><img class="next_cover lozad" data-src="/img/post-cover/2.png" onerror="onerror=null;src='/img/404.jpg'"><div class="label">下一篇</div><div class="next_info"><span>学习笔记——Java对象</span></div></a></div></nav><div class="relatedPosts"><div class="relatedPosts_headline"><i class="fa fa-fw fa-thumbs-up" aria-hidden="true"></i><span> 相关推荐</span></div><div class="relatedPosts_list"><div class="relatedPosts_item"><a href="/2019/08/08/对象/" title="学习笔记——Java对象"><img class="relatedPosts_cover lozad" data-src="/img/post-cover/2.png"><div class="relatedPosts_title">学习笔记——Java对象</div></a></div><div class="relatedPosts_item"><a href="/2019/08/12/Java三大特性练习(一)/" title="Java三大特性练习(一)"><img class="relatedPosts_cover lozad" data-src="/img/post-cover/7.png"><div class="relatedPosts_title">Java三大特性练习(一)</div></a></div><div class="relatedPosts_item"><a href="/2019/08/10/Java与时间有关的类/" title="学习笔记——Java与时间有关的类"><img class="relatedPosts_cover lozad" data-src="/img/post-cover/5.png"><div class="relatedPosts_title">学习笔记——Java与时间有关的类</div></a></div></div><div class="clear_both"></div></div></div></div><footer><div class="layout" id="footer"><div class="copyright">&copy;2019 By TheLittleBaby</div><div class="framework-info"><span>驱动 </span><a href="http://hexo.io"><span>Hexo</span></a><span class="footer-separator">|</span><span>主题 </span><a href="https://github.com/jerryc127/hexo-theme-butterfly"><span>Butterfly</span></a></div><div class="footer_custom_text">Hi, welcome to my <a href="https://www.wangxiuwei.xyz">blog</a>!</div></div></footer><i class="fa fa-arrow-up" id="go-up" aria-hidden="true"></i><section class="rightside" id="rightside"><i class="fa fa-book" id="readmode" title="阅读模式"> </i><i class="fa fa-plus" id="font_plus" title="放大字体"></i><i class="fa fa-minus" id="font_minus" title="缩小字体"></i><a class="translate_chn_to_cht" id="translateLink" href="javascript:translatePage();" title="简繁转换">简</a><i class="fa fa-moon-o nightshift" id="nightshift" title="夜间模式"></i></section><div id="post_bottom"><div id="post_bottom_items"><a id="to_comment" href="#post-comment"><i class="scroll_to_comment fa fa-comments"></i></a><i class="fa fa-list" id="mobile_toc"></i><div id="toc_mobile"><div class="toc_mobile_headline">目录</div><ol class="toc_mobile_items"><li class="toc_mobile_items-item toc_mobile_items-level-3"><a class="toc_mobile_items-link" href="#包裹类型"><span class="toc_mobile_items-number">1.</span> <span class="toc_mobile_items-text">包裹类型</span></a></li><li class="toc_mobile_items-item toc_mobile_items-level-3"><a class="toc_mobile_items-link" href="#字符串变量"><span class="toc_mobile_items-number">2.</span> <span class="toc_mobile_items-text">字符串变量</span></a></li><li class="toc_mobile_items-item toc_mobile_items-level-3"><a class="toc_mobile_items-link" href="#字符串操作"><span class="toc_mobile_items-number">3.</span> <span class="toc_mobile_items-text">字符串操作</span></a></li></ol></div></div></div><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script><script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/animejs@latest/anime.min.js"></script><script src="/js/third-party/fireworks.js"></script><script src="/js/nightshift.js"></script><script id="ribbon" src="/js/third-party/canvas-ribbon.js" size="150" alpha="0.6" zindex="-1" data-click="false"></script><script id="ribbon" src="https://cdn.jsdelivr.net/gh/jerryc127/CDN@latest/js/piao.js"></script><script src="/js/tw_cn.js"></script><script>translateInitilization()
+
+</script><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page@1.2.2/instantpage.min.js" type="module"></script><script src="https://cdn.jsdelivr.net/npm/lozad/dist/lozad.min.js"></script><script>const observer = lozad(); // lazy loads elements with default selector as '.lozad'
+observer.observe();</script></body></html>
